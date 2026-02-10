@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+public class Carrinho {
+    private ArrayList<Item> itens;
+
+    public Carrinho(){
+        itens = new ArrayList();
+    }
+
+    public void addItem(Item item){
+        itens.add(item);
+        System.out.println(item.getNome()+"Carrinho adicionado com sucesso");
+    }
+    public void removerItem(int codigo){
+        for(int i=0;i<itens.size();i++){
+            if(itens.get(i).getCodigo()==codigo){
+                itens.remove(i);
+                System.out.println(i+" removido com sucesso");
+            }
+        }
+    }
+    public void calcularPreco(){
+        double valorTotal = 0;
+        for(int i=0;i<itens.size();i++){
+           valorTotal+=itens.get(i).getPreco();
+        }
+        System.out.println("Total é R$: "+valorTotal);
+    }
+}
