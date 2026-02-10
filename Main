@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        Item itens1=new Item("Hamburquer de carne",12.99,1);
+        Item itens2=new Item("Hamburguer de frango",11.99,2);
+        Item itens3=new Item("Coca cola",5.99,3);
+        Item itens4=new Item("Guarana",4.99,4);
+
+        Carrinho carrinho=new Carrinho();
+
+        carrinho.addItem(itens1);
+        carrinho.addItem(itens2);
+        carrinho.addItem(itens3);
+        carrinho.addItem(itens4);
+        carrinho.addItem(itens1);
+
+        carrinho.removerItem(1);
+
+        carrinho.calcularPreco();
